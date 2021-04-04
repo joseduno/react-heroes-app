@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Aplicacion donde se muestra:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Uso de reducers
+- Implementación de contextos (useContext), util para compartir información entre componentes hermanos. Ver los archivos AuthContext.js, HeroesApp.js, LoginScreen.js, Navbar.js
+- Como renderizar componentes pasando parametros por la url. Ver DashboardRoutes.js, HeroCard.js, HeroScreen.js
+- Trabajar con query params para condicionar o especificar que componentes renderizar, además de hacer que la insteraccion del usuario modifique los query params (por ejemplo los cambios en una caja de texto) con el history.push(). Ver SearchScreen.js
+- Recordar ultimo path visitado despues de expirar/cerrar sesión, esto mejora la experiencia de usuario, ya que al iniciar sesión nuevamente, se renderiza la ultima pantalla visitada. Ver LoginScreen.js, PrivateRoute.js
+- Implementación de rutas, tanto privadas como publicas. Ver todos los archivos de la carpeta 'routes'
+- Testing de los componentes de react utilizados para gestionar las rutas
+- Como emular el llamado a funciones en entornos de prueba usando jest.fn()
+- Como y cuando utilizar MemoryRouter y Route en entornos de pruebas, de rutas o componentes que utilizar la url para renderizarse. Ver SearchScreen.test.js
+- Como emular el llamado a renderizar un componente que depende de la url y de sus query params. Ver SearchScreen.test.js
+- Como emular la implementación de contextos en entornos de prueba. Ver LoginScreen.test.js
+- 
 
-## Available Scripts
+### Notas adicionales:
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- La aplicación implementa un sistema de autenticación irreal, util solamente por razones educativas, especialmente para mostrar como guardar y obtener información del localStorage de los navegadores
+- Se utilizó React 16, ya que en React 17, la funcion 'mount' de librería utilizada para implementar los tests (enzyme) no funciona.
